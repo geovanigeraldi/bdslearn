@@ -16,4 +16,6 @@ public interface NotificationRepository  extends JpaRepository<Notification, Lon
 			+ "ORDER BY obj.moment DESC")
 	Page<Notification> find(User user, boolean unreadOnly, Pageable peageble);
 	
+	//Funciona igual a consulta acima (menos a regra do read)
+	//Page<Notification> findByUserAndReadOrderByMomentDesc(User user, boolean unreadOnly, Pageable peageble);
 }
